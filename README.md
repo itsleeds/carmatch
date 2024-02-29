@@ -7,7 +7,8 @@
 <!-- badges: end -->
 
 ``` r
-devtools::load_all()
+# devtools::load_all()
+source("https://github.com/ITSLeeds/carmatch/raw/main/R/carmatch.R")
 
 d_raw = cm_get()
 names(d_raw)
