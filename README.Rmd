@@ -1,12 +1,24 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # carmatch
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-``` r
+```{r, eval=FALSE}
 devtools::load_all()
 
 d_raw = cm_get()
@@ -49,3 +61,4 @@ sheet1$MakeModel <- paste0(sheet1$Make, " ", sheet1$`Model 1`)
 EU_data_summary$Commercial_name_in_VEH0160_2017[EU_data_summary$MakeModel %in% UK2017$MakeModel] <- TRUE
 EU_data_summary$Commercial_name_in_VEH0160[EU_data_summary$MakeModel %in% sheet1$MakeModel] <- TRUE
 ```
+
