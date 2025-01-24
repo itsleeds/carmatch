@@ -3,7 +3,7 @@ cm_get = function(u = "https://www.eea.europa.eu/data-and-maps/data/co2-cars-emi
   f = file.path(dir, "co2.zip")
   dd = file.path(dir, "co2")
 if(!file.exists(f)) {
-    download.file(u, f)
+    download.file(u, f, mode = "wb")
     dir.create(dd)
     unzip(f, exdir = dd)
   }
